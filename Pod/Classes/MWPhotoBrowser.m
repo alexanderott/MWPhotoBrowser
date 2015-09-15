@@ -507,6 +507,7 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
 	
 	// Adjust frames and configuration of each visible page
 	for (MWZoomingScrollView *page in _visiblePages) {
+	page.backgroundColor = self.view.backgroundColor;
         NSUInteger index = page.index;
 		page.frame = [self frameForPageAtIndex:index];
         if (page.captionView) {
