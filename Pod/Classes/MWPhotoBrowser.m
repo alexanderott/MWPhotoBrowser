@@ -49,6 +49,13 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
 	return self;
 }
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
+        [self _initialisation];
+    }
+    return self;
+}
+
 - (void)_initialisation {
     
     // Defaults
